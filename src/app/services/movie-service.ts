@@ -28,5 +28,4 @@ export class MovieService {
   public delete(imdbID) {
     return this.http.delete<Movie[]>('http://localhost:8080/movie/deleteMovie' + '/' + imdbID);
   }
-
 }
