@@ -1,0 +1,39 @@
+<div class="p-3 mb-2 bg-light text-white">
+
+  <div class="col-md-12">
+
+    <nav class="navbar navbar-light bg-dark justify-content-between">
+      <a class="font-weight-bold" (click)="fetchData()">Movie</a>
+      <form class="form-inline">
+        <input type="text" [(ngModel)]="title"
+               [ngModelOptions]="{standalone:true}"
+               placeholder="Enter your search terms"
+               class="form-control mr-sm-2"/>
+        <button (click)="search()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+
+    <table class="table table-striped" border="3">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Type</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>{{movie.Title}}</td>
+        <td>{{movie.Year}}</td>
+        <td>{{movie.Type}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="delete(movie)"> Delete Movie</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
