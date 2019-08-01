@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {MovieSaveRequest} from '../request/MovieSaveRequest';
+import {Observable} from 'rxjs';
 
 export class Movie {
   constructor(public imdbID: string,
@@ -27,6 +29,10 @@ export class MovieService {
 
   public delete(imdbID) {
     return this.http.delete<Movie[]>('http://localhost:8080/movie/deleteMovie' + '/' + imdbID);
+  }
+
+  public saveMovie(movieSaveRequest: MovieSaveRequest): Observable<Movie> {
+    return this.http.post('http://localhost:8080/movie', movieSaveRequest);
   }
 
 }
