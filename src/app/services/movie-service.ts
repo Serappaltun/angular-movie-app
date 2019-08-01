@@ -31,8 +31,8 @@ export class MovieService {
     return this.http.delete<Movie[]>('http://localhost:8080/movie/deleteMovie' + '/' + imdbID);
   }
 
-  public saveMovie(movieSaveRequest: MovieSaveRequest): Observable<Movie> {
-    return this.http.post('http://localhost:8080/movie', movieSaveRequest);
+  public saveMovie(movieSaveRequest: MovieSaveRequest) {
+    return this.http.post<Movie>('http://localhost:8080/movie', movieSaveRequest);
   }
 
 }

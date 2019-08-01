@@ -25,12 +25,14 @@ export class AddMovieComponent implements OnInit {
     this.movieService.saveMovie(this.movieSaveRequest)
       .subscribe(data => {
         this.movies = data;
-        const message = 'Movie created successfully.';
-        alert(message);
+        alert('Movie created successfully.');
       });
   }
 
   protected onSubmit(f: NgForm): void {
+
+    // code here
+
     f.resetForm();
   }
 
