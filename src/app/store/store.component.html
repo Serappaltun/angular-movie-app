@@ -1,0 +1,209 @@
+<div class="p-3 mb-2 bg-light text-white">
+
+  <div class="col-md-12">
+
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <strong>Pay App Logo</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    <table align="center" class="table table-striped">
+      <div class="form-group" align="center">
+      <tr class="active">
+        <td align="right" width="30%"><span class="black1">Product: </span></td>
+        <td align="left" width="50%"><select name="product" >
+          <option value="iphone5">iPhone 7</option>
+        </select></td>
+      </tr></div>
+
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">OrderId: </span></td>
+        <td><input type="name" [(ngModel)]="movie.oid" value="test" placeholder="oid" name="oid" class="form-control" id="oid"></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Tutar: </span></td>
+        <td align="left" width="50%"><input name="amount" value="3999.95" type="text" [(ngModel)]="movie.amount"></td>
+      </tr></div>
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Para Birimi : </span></td>
+        <td align="left" width="50%"><select name="currency" [(ngModel)]="movie.currency">
+          <option value="036">AUD</option>
+          <option value="977">BAM</option>
+          <option value="975">BGN</option>
+          <option value="124">CAD</option>
+          <option value="756">CHF</option>
+          <option value="208">DKK</option>
+          <option value="978">EUR</option>
+          <option value="826">GBP</option>
+          <option value="191">HRK</option>
+          <option value="392">JPY</option>
+          <option value="414">KWD</option>
+          <option value="417">KGS</option>
+          <option value="807">MKD</option>
+          <option value="578">NOK</option>
+          <option value="946">RON</option>
+          <option value="941">RSD</option>
+          <option value="643">RUB</option>
+          <option value="682">SAR</option>
+          <option value="752">SEK</option>
+          <option value="949" selected="selected">TL</option>
+          <option value="156">YUAN</option>
+          <option value="840">USD</option>
+          <option value="944">AZN</option>
+          <option value="048">BHD</option>
+          <option value="414">KWD</option>
+          <option value="203">CZK</option>
+          <option value="985">PLN</option>
+          <option value="608">PHP</option>
+          <option value="702">SGD</option>
+          <option value="554">NZD</option>
+          <option value="764">THB</option>
+          <option value="512">OMR</option>
+          <option value="458">MYR</option>
+          <option value="---">BOS Simulasyon</option>
+        </select></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Isyeri: </span></td>
+        <td align="left" width="50%"><input name="clientid" value="700012349" type="text"  [(ngModel)]="movie.clientid"></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Isyeri Anahtari: </span></td>
+        <td align="left" width="50%"><input name="storekey" value="TEST1234" type="text" [(ngModel)]="movie.storekey"></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Isyeri Tipi </span></td>
+        <td align="left" width="50%"><select name="storetype" [(ngModel)]="movie.storetype">
+          <option value="3D">3D</option>
+          <option value="3D PAY HOSTING">3D PAY HOSTING</option>
+          <option value="3D PAY">3D PAY</option>
+        </select></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Islem tipi : </span></td>
+        <td align="left" width="50%"><select name="islemtipi" [(ngModel)]="movie.islemtipi">
+          <option value="Auth">Auth</option>
+          <option value="PreAuth">PreAuth</option>
+        </select></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Taksit: </span></td>
+        <td align="left" width="50%"><input name="taksit" value="2"
+                                            type="text" [(ngModel)]="movie.taksit"></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Pan: </span></td>
+        <td align="left" width="50%"><input name="pan" value="4508034508034509" type="text"></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">CV2: </span></td>
+        <td align="left" width="50%"><input name="cv2" value="000" type="text" [(ngModel)]="movie.cv2"></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Expiry Date : </span></td>
+        <td align="left" width="50%"><select
+          name="expMonth" size="1" class="buy" [(ngModel)]="movie.expMonth">
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select> <select name="expYear" size="1" class="buy" [(ngModel)]="movie.expYear">
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+          <option value="2027">2027</option>
+          <option value="2028">2028</option>
+          <option value="2029">2029</option>
+          <option value="2030">2030</option>
+          <option value="2031">2031</option>
+          <option value="2032">2032</option>
+          <option value="2033">2033</option>
+        </select></td>
+      </tr></div>
+
+      <div class="form-group" align="center">
+        <tr>
+        <td align="right" width="30%"><span class="black1">Hash Algoritmasi:</span></td>
+        <td align="left" width="50%"><select name="hashAlgorithm" [(ngModel)]="movie.hashAlgorithm">
+          <option value="ver1">ver1</option>
+          <option value="ver2">ver2</option>
+          <option value="ver3">ver3</option>
+        </select></td>
+      </tr>
+      </div>
+
+      <div class="form-group" align="center">
+      <tr>
+        <td align="right" width="30%"><span class="black1">Dil: </span></td>
+        <td align="left" width="50%"><select name="lang" [(ngModel)]="movie.lang">
+          <option value="sq">Albanian</option>
+          <option value="bs">Bosnian</option>
+          <option value="hr">Croatian</option>
+          <option value="en">English</option>
+          <option value="mk">Macedonian</option>
+          <option value="tr" selected="selected">Turkish</option>
+          <option value="ro">Romanian</option>
+          <option value="ru">Russian</option>
+          <option value="sr">Serbian</option>
+          <option value="sk">Slovak</option>
+          <option value="sl">Slovenian</option>
+          <option value="az">Azerbaijan</option>
+          <option value="fr">Français</option>
+          <option value="hu">Hungarian</option>
+          <option value="pl">Polish</option>
+          <option value="de">German</option>
+          <option value="cs">Czech</option>
+          <option value="hu">Hungarian</option>
+        </select></td>
+      </tr></div>
+
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-danger" (click)="pay()" style="float:right"> Odeme Bilgilerine Git</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>

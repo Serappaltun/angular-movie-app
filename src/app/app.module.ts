@@ -7,26 +7,36 @@ import {MovieComponent} from './movie/movie.component';
 import {MovieService} from './services/movie-service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { AddMovieComponent } from './add-movie/add-movie.component';
+import {StoreComponent} from "./store/store.component";
+import {StoreService} from "./services/store-service";
+import {AddMovieComponent} from "./add-movie/add-movie.component";
+import {HeaderMovieComponent} from "./header-movie/header-movie.component";
+import {FooterMovieComponent} from "./footer-movie/footer-movie.component";
+import {SidebarMovieComponent} from "./sidebar-movie/sidebar-movie.component";
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      MovieComponent,
-      AddMovieComponent
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule,
-      HttpClientModule,
-      FormsModule
-   ],
-   providers: [
-      MovieService
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    MovieComponent,
+    StoreComponent,
+    AddMovieComponent,
+    HeaderMovieComponent,
+    FooterMovieComponent,
+    SidebarMovieComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [
+    MovieService,
+    StoreService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 }

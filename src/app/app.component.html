@@ -1,3 +1,10 @@
-<div class="container">
-  <router-outlet></router-outlet>
+<app-header-movie></app-header-movie>
+<div class="float-left" style="width: 400px;height: auto">
+<app-sidebar-movie></app-sidebar-movie>
 </div>
+<div class="container">
+  <router-outlet style="float: right"></router-outlet>
+</div>
+
+<app-footer-movie></app-footer-movie>
+

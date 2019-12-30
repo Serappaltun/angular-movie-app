@@ -1,0 +1,17 @@
+<div class="p-3 mb-2 bg-light text-white">
+  <div class="col-md-12">
+
+    <nav class="navbar navbar-light bg-dark justify-content-between">
+      <a class="font-weight-bold" routerLink="/">Movie</a>
+      <a  routerLink="/addmovie" class="nav-link">Add New Movie</a>
+
+      <form class="form-inline">
+        <input type="text" [(ngModel)]="title"
+               [ngModelOptions]="{standalone:true}"
+               placeholder="Enter your search terms"
+               class="form-control mr-sm-2"/>
+        <button (click)="search()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+  </div>
+</div>

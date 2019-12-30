@@ -20,19 +20,19 @@ export class MovieService {
   }
 
   public getMovies() {
-    return this.http.get<Movie[]>('http://localhost:8080/movie/findAllMovies');
+    return this.http.get<Movie[]>('http://localhost:8082/movies/findAllMovies');
   }
 
   public findByTitle(title) {
-    return this.http.get<Movie[]>('http://localhost:8080/movie/findByTitle' + '/' + title);
+    return this.http.get<Movie[]>('http://localhost:8082/movies/findByTitle' + '/' + title);
   }
 
   public delete(imdbID) {
-    return this.http.delete<Movie[]>('http://localhost:8080/movie/deleteMovie' + '/' + imdbID);
+    return this.http.delete<Movie[]>('http://localhost:8082/movies/deleteMovie' + '/' + imdbID);
   }
 
   public saveMovie(movieSaveRequest: MovieSaveRequest) {
-    return this.http.post<Movie>('http://localhost:8080/movie', movieSaveRequest);
+    return this.http.post<Movie>('http://localhost:8082/movies', movieSaveRequest);
   }
 
 }
