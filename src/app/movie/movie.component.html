@@ -2,7 +2,7 @@
 
   <div class="col-md-12">
 
-    <table class="table table-striped" border="3">
+    <table class="table table-striped" border="3" routerLink="/movie">
       <thead>
       <tr>
         <th>Title</th>
@@ -11,7 +11,7 @@
         <th></th>
       </tr>
       </thead>
-      <tbody>
+      <tbody routerLink="/movie">
       <tr *ngFor="let movie of movies">
         <td>{{movie.Title}}</td>
         <td>{{movie.Year}}</td>

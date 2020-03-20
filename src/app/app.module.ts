@@ -13,6 +13,7 @@ import {AddMovieComponent} from "./add-movie/add-movie.component";
 import {HeaderMovieComponent} from "./header-movie/header-movie.component";
 import {FooterMovieComponent} from "./footer-movie/footer-movie.component";
 import {SidebarMovieComponent} from "./sidebar-movie/sidebar-movie.component";
+import {SuggestionMovieComponent} from "./suggestion-movie/suggestion-movie.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {SidebarMovieComponent} from "./sidebar-movie/sidebar-movie.component";
     AddMovieComponent,
     HeaderMovieComponent,
     FooterMovieComponent,
-    SidebarMovieComponent
+    SidebarMovieComponent,
+    SuggestionMovieComponent
   ],
   imports: [
     BrowserModule,

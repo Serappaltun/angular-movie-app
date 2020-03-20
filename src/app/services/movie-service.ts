@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {MovieSaveRequest} from '../request/MovieSaveRequest';
-import {Observable} from 'rxjs';
+import {UrlConstant} from "../utils/url-constant/url-constant";
+import {StoryResponse} from "../response/story-response";
 
 export class Movie {
   constructor(public imdbID: string,
@@ -11,8 +12,6 @@ export class Movie {
               public Poster: string) {
   }
 }
-
-
 @Injectable()
 export class MovieService {
 
@@ -20,19 +19,23 @@ export class MovieService {
   }
 
   public getMovies() {
-    return this.http.get<Movie[]>('http://localhost:8082/movies/findAllMovies');
+    return this.http.get<Movie[]>(UrlConstant.HTTP_URL + 'movies/findAllMovies');
   }
 
   public findByTitle(title) {
-    return this.http.get<Movie[]>('http://localhost:8082/movies/findByTitle' + '/' + title);
+    return this.http.get<Movie[]>(UrlConstant.HTTP_URL + 'movies/findByTitle' + '/' + title);
   }
 
   public delete(imdbID) {
-    return this.http.delete<Movie[]>('http://localhost:8082/movies/deleteMovie' + '/' + imdbID);
+    return this.http.delete<Movie[]>(UrlConstant.HTTP_URL + 'movies/deleteMovie' + '/' + imdbID);
   }
 
   public saveMovie(movieSaveRequest: MovieSaveRequest) {
-    return this.http.post<Movie>('http://localhost:8082/movies', movieSaveRequest);
+    return this.http.post<Movie>(UrlConstant.HTTP_URL + 'movies', movieSaveRequest);
+  }
+
+  public getStoryName() {
+    return this.http.get(UrlConstant.HTTP_URL + 'story/stories-name');
   }
 
 }

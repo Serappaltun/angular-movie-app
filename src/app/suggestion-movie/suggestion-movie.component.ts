@@ -5,12 +5,13 @@ import {Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
 
 @Component({
-  selector: 'app-header-movie',
-  templateUrl: './header-movie.component.html',
-  styleUrls: ['./header-movie.component.css']
+  selector: 'app-suggestion-movie',
+  templateUrl: './suggestion-movie.component.html',
+  styleUrls: ['./suggestion-movie.component.css']
 })
-export class HeaderMovieComponent implements OnInit {
+export class SuggestionMovieComponent implements OnInit {
 
+  movieSaveRequest: MovieSaveRequest = new MovieSaveRequest();
   public movies: Movie[];
   title: string;
 
@@ -19,7 +20,6 @@ export class HeaderMovieComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.fetchData();
   }
 
   search() {
@@ -36,11 +36,18 @@ export class HeaderMovieComponent implements OnInit {
     }
   }
 
-  fetchData() {
-    this.movieService.getMovies()
+  save() {
+     this.movieService.saveMovie(this.movieSaveRequest)
       .subscribe(data => {
-        this.movies = data;
+        alert('Movie created successfully.');
       });
+  }
+
+  protected onSubmit(f: NgForm): void {
+
+    // code here
+
+    f.resetForm();
   }
 
 }

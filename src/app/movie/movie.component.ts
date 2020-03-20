@@ -18,21 +18,6 @@ export class MovieComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchData();
-
-  }
-
-  search() {
-    if (this.title != null) {
-      this.movieService.findByTitle(this.title)
-        .subscribe(data => {
-          this.movies = data;
-        });
-    } else {
-      this.movieService.getMovies()
-        .subscribe(data => {
-          this.movies = data;
-        });
-    }
   }
 
   delete(movie: Movie) {
@@ -48,5 +33,4 @@ export class MovieComponent implements OnInit {
         this.movies = data;
       });
   }
-
 }

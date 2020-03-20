@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {MovieSaveRequest} from '../request/MovieSaveRequest';
-import {Movie, MovieService} from '../services/movie-service';
+import {MovieService} from '../services/movie-service';
 import {Router} from '@angular/router';
-import {NgForm} from '@angular/forms';
+import {StoryResponse} from "../response/story-response";
 
 @Component({
   selector: 'app-sidebar-movie',
@@ -11,6 +10,19 @@ import {NgForm} from '@angular/forms';
 })
 export class SidebarMovieComponent implements OnInit {
 
+  public stories: any;
+
+  constructor(private storyService: MovieService,
+              private router: Router) {
+  }
   ngOnInit() {
+    this.fetchData();
+  }
+
+  fetchData() {
+    this.storyService.getStoryName()
+      .subscribe(data => {
+        this.stories = data;
+      });
   }
 }

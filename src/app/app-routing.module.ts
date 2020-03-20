@@ -1,13 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MovieComponent} from './movie/movie.component';
 import {AddMovieComponent} from "./add-movie/add-movie.component";
+import {SuggestionMovieComponent} from "./suggestion-movie/suggestion-movie.component";
+import {MovieComponent} from "./movie/movie.component";
 
 
 const routes: Routes = [
 
-  {path: '', component: MovieComponent},
-  {path: 'addmovie', component: AddMovieComponent}
+  {path: 'suggestionMovie', component: SuggestionMovieComponent},
+  {path: 'movie', component: MovieComponent},
+  {path: 'addMovie', component: AddMovieComponent}
 
 ];
 
